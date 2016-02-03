@@ -8,6 +8,8 @@
 # 3-set the value of the inverse of a matrix
 # 4-get the value of the inverse of a matrix
 
+##This function introduces functions to set and get the value of the matrix 
+## and its cached inversed value.
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -21,7 +23,9 @@ list(set = set, get = get,
      setinverse = setinverse,
      getinverse = getinverse)
 }
-## Write a short comment describing this function
+## This function tries to get the cached inversed value of the matrix, 
+## if the value is not yet cached, it calculates the inversed value and caches it.
+## Then returns the value.
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
